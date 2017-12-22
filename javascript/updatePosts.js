@@ -27,7 +27,7 @@ var postBtn = document.getElementById('post-btn');
 var postUpdate = document.getElementById('new-post');
 
 var postCount = document.getElementById('posts-count');
-postCount.innerHTML = "<strong>" + profil.posts.length + "</strong>" + " posts";
+postCount.innerHTML = "<strong>" + allPosts.children.length + "</strong>" + " posts";
 
 postBtn.onclick = function imgPosting(e) {
 	
@@ -70,7 +70,7 @@ postBtn.onclick = function imgPosting(e) {
 
 		allPosts.insertBefore(newArticle, allPosts.firstChild);
 
-		postCount.innerHTML ++;
+		postCount.innerHTML = "<strong>" + document.getElementsByClassName('post-container').length + "</strong>" + " posts";
 
 		}
 }
