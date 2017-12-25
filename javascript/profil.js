@@ -100,15 +100,16 @@ for (var i = profil.posts.length - 1; i >= 0; i--) {
 function modalFunction(event){
 
 	var imgModal = event.currentTarget;
+	var articleModal = imgModal.parentNode;
 	imgModal.classList.add('modal-img');
 	userText.innerHTML = "<strong>" + profil.username + "</strong>" + " " + imgModal.getAttribute('data-text');
 	imgLocation.innerHTML = imgModal.getAttribute('data-loc');
 	imgText.className = "modal-text";
-	newArticle.classList.add('modal');
+	articleModal.classList.add('modal');
 
 	window.onclick = function(event) {
-	if (event.target == newArticle){
-		newArticle.className = "post-container";
+	if (event.target == articleModal){
+		articleModal.className = "post-container";
 		imgModal.className = "post-img";
 		imgText.className = "post-text";
 	}
